@@ -438,6 +438,14 @@ if ($hassiteconfig || has_capability('theme/boost_union:configure', context_syst
         $setting = new admin_setting_heading($name, $title, null);
         $tab->add($setting);
 
+        // Footer background image setting.
+        $name = 'theme_boost_union/footerbackgroundimage';
+        $title = get_string('footerbackgroundimage', 'theme_boost_union');
+        $description = get_string('footerbackgroundimage_desc', 'theme_boost_union');
+        $setting = new admin_setting_configstoredfile($name, $title, $description, 'footerbackgroundimage');
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $tab->add($setting);
+
         // Setting: Footnote.
         $name = 'theme_boost_union/footnote';
         $title = get_string('footnotesetting', 'theme_boost_union', null, true);

@@ -130,6 +130,8 @@ $string['footnoteheading'] = 'Footnote';
 // ... ... Setting: Footnote.
 $string['footnotesetting'] = 'Footnote';
 $string['footnotesetting_desc'] = 'Whatever you add to this textarea will be displayed at the end of a page, in the footer (not the floating footer) on every page which uses the layouts "drawers", "columns2" or "login". Content in this area could be for example the copyright, the terms of use or the name of your organisation. <br/> If you want to remove the footnote again, just empty the text area.';
+$string['footerbackgroundimage'] = 'Footer background image';
+$string['footerbackgroundimage_desc'] = 'The image to display as a background of the footer. The background image you upload here will override the background image in your theme preset files.';
 
 // Settings: Static pages tab.
 $string['staticpagestab'] = 'Static pages';

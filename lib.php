@@ -170,6 +170,14 @@ function theme_boost_union_get_extra_scss($theme) {
         $content .= ' }';
     }
 
+    // Sets the footer background image.
+    $footerbackgroundimageurl = $theme->setting_file_url('footerbackgroundimage', 'footerbackgroundimage');
+    if (!empty($footerbackgroundimageurl)) {
+        $content .= 'body #footnote { ';
+        $content .= "background-image: url('$footerbackgroundimageurl'); background-size: cover;";
+        $content .= ' }';
+    }
+
     // Always return the background image with the scss when we have it.
     return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
 }
@@ -198,7 +206,7 @@ function theme_boost_union_get_precompiled_css() {
  */
 function theme_boost_union_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
     if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage' ||
-        $filearea === 'loginbackgroundimage' || $filearea === 'favicon')) {
+        $filearea === 'loginbackgroundimage' || $filearea === 'footerbackgroundimage' || $filearea === 'favicon')) {
         $theme = theme_config::load('boost_union');
         // By default, theme files must be cache-able by both browsers and proxies.
         if (!array_key_exists('cacheability', $options)) {
