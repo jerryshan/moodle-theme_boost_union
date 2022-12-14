@@ -238,3 +238,21 @@ $string['privacy:metadata'] = 'The Boost Union theme does not store any personal
 $string['boost_union:configure'] = 'To be able to configure the theme as non-admin';
 $string['boost_union:viewhintcourseselfenrol'] = 'To be able to see a hint for unrestricted self enrolment in a visible course.';
 $string['boost_union:viewhintinhiddencourse'] = 'To be able to see a hint in a hidden course.';
+
+// UC Customisation
+$string['uclogin_top'] = '<div>
+<form action="https://learn.canterbury.ac.nz/Shibboleth.sso/Login" method="get">
+<p style="font-size: 26px;">UC Student / Staff Login</p>
+<p>
+<input type="hidden" name="entityID" value="https://idp.canterbury.ac.nz/idp/shibboleth" />
+<input type="hidden" name="target" value="https://learn.canterbury.ac.nz/auth/shibboleth/index.php" />
+<button class="btn btn-primary btn-lg" type="submit">I\'m from UC, log me in!</button>
+</p>
+</form>
+</div>';
+$string['uclogin_bottom'] = '<div><div class="block_container">
+    <div class="block_title">Other Tuakiri member insititution</div>
+    <div class="block_link"><a href="https://learn.canterbury.ac.nz/auth/shibboleth/index.php">Login in here</a></div>
+</div>
+</div>';
+
